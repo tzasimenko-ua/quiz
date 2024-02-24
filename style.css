@@ -1,0 +1,296 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+  background-image: url(/assets/images/9.jpeg);
+  background-position: center center;
+  font-family: "Rubik", sans-serif;
+    color: #445361;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+  
+}
+
+header {
+  z-index: 2; /* Установите z-index, чтобы хедер оставался выше остальных элементов */
+  background-color: #557f69;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+header h1 {
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#start-page {
+  background:#ffffff;
+  width: 85%;
+  max-width: 830px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px; /* Увеличьте отступ для контейнера с текстом */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#start-page h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#btn-start {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  
+
+#btn-start:hover {
+  background-color: #45a049;
+}
+
+
+.quiz-over-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-over-modal.active {
+    display: flex;
+    z-index: 1; /* Установите z-index окна с результатами ниже хедера */
+
+    
+}
+.quiz-over-modal .content {
+  background-color: #fff; /* Измените цвет фона, если нужно */
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.quiz-over-modal h1 {
+  font-size: 1.5rem; /* Измените размер шрифта заголовка по вашему вкусу */
+  margin-bottom: 20px;
+}
+
+.quiz-over-modal p {
+  font-size: 1rem; /* Измените размер шрифта текста по вашему вкусу */
+  margin-bottom: 20px;
+}
+
+.quiz-over-modal button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quiz-over-modal button:hover {
+  background-color: #45a049;
+}
+
+
+.game-area {
+    background-color: #E6ECF0;
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+.question-area {
+    width: 50%;
+    font-size: 2rem;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.question-area span {
+    padding: 0 15px;
+}
+
+.quiz-container {
+  display: none;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .question-number h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  #question {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+  }
+  
+  .options {
+    font-family: "Kanit", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .option {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .option:hover {
+    background-color: #f0f0f0;
+  }
+
+  .correct {
+    background-color: #8FEC8F; /* Зеленый цвет для правильного ответа */
+}
+
+/* Добавление стилей для подсветки неправильного варианта */
+.wrong {
+    background-color: #FF7272; /* Красный цвет для неправильного ответа */
+}
+  .disabled {
+    pointer-events: none;
+  }
+
+  .button {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #btn-next {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #btn-next:hover {
+    background-color: #45a049;
+  }
+  
+  #answers-tracker {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#answers-tracker div {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #445361;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: white;
+}
+
+#answers-tracker div.correct {
+    background-color: #8FEC8F;
+}
+
+#answers-tracker div.wrong {
+    background-color: red;
+}
+  
+
+footer {
+  background-color: #557f69;
+  z-index: 2; /* Установите z-index для футера, чтобы он оставался выше остальных элементов */
+
+  padding: 10px;
+  color: white; /* Добавьте цвет текста */
+  text-align: center; /* Выравнивание текста по центру */
+  position: fixed; /* Фиксированная позиция */
+  bottom: 0; /* Прижатие к нижнему краю */
+  width: 100%; /* Ширина на всю ширину экрана */
+}
+
+footer p {
+  margin: 0; /* Уберите внутренний отступ от текста */
+}
+
+
+/* Media Query для размеров экрана до 414px */
+@media (max-width: 414px) {
+  /* Дополнительные стили для меньших экранов */
+  
+  .game-area {
+      width: 50%; /* Ширина на всю ширину экрана */
+      
+  }
+
+  .question-area {
+      width: 80%; /* Уменьшенная ширина блока с вопросом */
+      font-size: 1.5rem; /* Уменьшенный размер шрифта вопроса */
+      padding: 30px 0; /* Уменьшенный внутренний отступ для блока с вопросом */
+  }
+
+  .options {
+      gap: 5px; /* Уменьшенный отступ между вариантами ответа */
+  }
+
+  .option {
+      padding: 5px; /* Уменьшенный отступ для вариантов ответа */
+      font-size: 1rem; /* Уменьшенный размер шрифта для вариантов ответа */
+  }
+
+  #btn-next {
+      font-size: 1rem; /* Уменьшенный размер шрифта для кнопки "Next" */
+  }
+}
+
